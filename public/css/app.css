@@ -1,0 +1,166 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Helvetica Neue", "PingFangSC-Light", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    background-color: #eceff3;
+    color: #444;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+input, a, button {
+    transition: background-color ease-in-out .15s, color ease-in-out .15s, border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.app {
+    margin-top: 80px;
+}
+
+.container {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar {
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px 0 rgba(0,34,77,.1);
+}
+
+.navbar-inner {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.navbar-brand {}
+
+.navbar-brand > .logo {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-indent: -9999em;
+    background-image: url(../img/icon.svg);
+}
+
+.navbar-search {
+    flex: 1;
+    margin-left: 40px;
+    border-left: 1px solid #F4F4F4;
+    padding-left: 40px;
+}
+
+.navbar-search-form {}
+
+.navbar-search-form .search-site-selector {
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.navbar-search-form .search-site-selector .placeholder {
+    padding-right: 35px;
+    padding-left: 18px;
+    background-color: #f9f9f9;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    height: 100%;
+    line-height: 28px;
+}
+
+.navbar-search-form .search-site-selector .placeholder:after {
+    content: "\f2f2";
+    font-family: 'Material-Design-Iconic-Font';
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.navbar-search-form .search-site-selector .options {
+    display: none;
+}
+
+.navbar-search-form .search-input {
+    background-color: #f9f9f9;
+    border: 1px solid #efefef;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #555;
+    outline: none;
+    border-radius: 3px;
+    width: 350px;
+}
+
+.navbar-search-form .search-input:focus {
+    border: 1px solid #1185fe;
+}
+
+.navbar-search-form .search-submit {
+    height: 30px;
+    padding: 0 12px;
+    background-color: #FFF;
+    border: 1px solid #efefef;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+}
+
+.navbar-search-form .search-submit:hover {
+    border: 1px solid #1185fe;
+    background-color: #1185fe;
+    color: #FFF;
+}
+
+.music-list {}
+
+.music-list-inner {}
+
+.music-list-main {
+    background: #FFF;
+    padding: 15px 0;
+    border-radius: 3px;
+    border: 1px solid #F4F4F4;
+}
+
+.music-list-item {
+    padding: 10px 25px;
+    border-left: 2px solid rgba(0, 0, 0, 0);
+}
+
+.music-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.music-list-item:hover {
+    border-left: 2px solid #1185fe;
+}
+
+.music-list-item .title {}
+
+.music-list-item .author {}
+
+.music-list-item .album {}
