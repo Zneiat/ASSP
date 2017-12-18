@@ -18,8 +18,59 @@ input, a, button {
     transition: background-color ease-in-out .15s, color ease-in-out .15s, border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+.anim-fade-in {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+
+.anim-fade-out {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+}
+
+.anim-flash {
+    -webkit-animation-name: flash;
+    animation-name: flash
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+    }
+}
+
+@keyframes flash {
+    0%,50%,to {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
 .app {
     margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -77,7 +128,8 @@ input, a, button {
     user-select: none;
 }
 
-.navbar-search-form .search-site-selector .placeholder {
+.navbar-search-form .search-site-selector .option-selected {
+    position: relative;
     padding-right: 35px;
     padding-left: 18px;
     background-color: #f9f9f9;
@@ -85,20 +137,45 @@ input, a, button {
     border-radius: 3px;
     height: 100%;
     line-height: 28px;
+    min-width: 85px;
 }
 
-.navbar-search-form .search-site-selector .placeholder:after {
+.navbar-search-form .search-site-selector .option-selected:after {
     content: "\f2f2";
     font-family: 'Material-Design-Iconic-Font';
     position: absolute;
     display: inline-block;
     width: 15px;
     text-align: center;
-    padding-left: 10px;
+    padding-right: 10px;
+    right: 0;
 }
 
 .navbar-search-form .search-site-selector .options {
     display: none;
+    border-radius: 0 0 3px 3px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-search-form .search-site-selector .options.show {
+    display: block;
+}
+
+.navbar-search-form .search-site-selector .options .item {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding: 3px 16px;
+    transition: background .2s;
+    border-left: 1px solid transparent;
+}
+
+.navbar-search-form .search-site-selector .options .item:hover,
+.navbar-search-form .search-site-selector .options .item.selected {
+    background: #FBFBFB;
+    border-left: 1px solid #0083ff;
 }
 
 .navbar-search-form .search-input {

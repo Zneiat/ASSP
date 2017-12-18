@@ -18,33 +18,29 @@
                     <span class="logo"></span>
                 </a>
                 <div class="navbar-search">
-                    <form class="navbar-search-form">
+                    <form class="navbar-search-form" action="./m-api" method="get">
+                        <input type="hidden" name="action" value="search">
                         <div class="search-site-selector">
-                            <div class="placeholder">网易云</div>
-                            <div class="options">
-                                <div class="item">网易</div>
-                                <div class="item">腾讯</div>
-                                <div class="item">虾米</div>
-                                <div class="item">酷狗</div>
-                                <div class="item">百度</div>
+                            <div class="option-selected"></div>
+                            <div class="options anim-fade-in">
+                                <div class="item" data-val="netease">网易</div>
+                                <div class="item" data-val="tencent">腾讯</div>
+                                <div class="item" data-val="xiami">虾米</div>
+                                <div class="item" data-val="kugou">酷狗</div>
+                                <div class="item" data-val="baidu">百度</div>
                             </div>
                         </div>
-                        <input type="text" class="search-input" name="search_input" placeholder="音乐名、歌手或专辑名" autocomplete="off">
+                        <input type="hidden" name="site" value="">
+                        <input type="text" class="search-input" name="keyword" placeholder="音乐名、歌手或专辑名" autocomplete="off">
                         <button type="submit" class="search-submit"><i class="zmdi zmdi-search"></i></button>
                     </form>
                 </div>
             </div>
         </nav>
-    </div>
 
-    <div class="music-list">
-        <div class="music-list-inner container">
-            <div class="music-list-main">
-                <div class="music-list-item">
-                    <div class="title">撃破</div>
-                    <div class="album">NARUTO-ナルト-疾風伝 オリジナル・サウンドトラック II (火影忍者疾风传OST2)</div>
-                    <div class="author">たかなし やすはる</div>
-                </div>
+        <div class="music-list">
+            <div class="music-list-inner container">
+                <div class="music-list-main"></div>
             </div>
         </div>
     </div>

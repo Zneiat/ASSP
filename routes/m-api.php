@@ -49,7 +49,12 @@ $router->get('/m-api', function (Request $request) use ($router) {
         case 'song_src':
             $result = $_api->url($_id);
             break;
-        
+    
+        case 'song_src_r':
+            $result = json_decode($_api->url($_id), true);
+            return redirect($result['url']);
+            break;
+            
         case 'song_lrc':
             $result = $_api->lyric($_id);
             break;
