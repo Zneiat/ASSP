@@ -100,7 +100,8 @@ input, a, button {
     -ms-flex-align: center;
 }
 
-.navbar-brand {}
+.navbar-brand {
+}
 
 .navbar-brand > .logo {
     width: 30px;
@@ -117,7 +118,8 @@ input, a, button {
     padding-left: 40px;
 }
 
-.navbar-search-form {}
+.navbar-search-form {
+}
 
 .navbar-search-form .search-site-selector {
     display: inline-block;
@@ -172,8 +174,7 @@ input, a, button {
     border-left: 1px solid transparent;
 }
 
-.navbar-search-form .search-site-selector .options .item:hover,
-.navbar-search-form .search-site-selector .options .item.selected {
+.navbar-search-form .search-site-selector .options .item:hover, .navbar-search-form .search-site-selector .options .item.selected {
     background: #FBFBFB;
     border-left: 1px solid #0083ff;
 }
@@ -212,15 +213,16 @@ input, a, button {
     color: #FFF;
 }
 
-.music-list {}
+.music-list {
+}
 
-.music-list-inner {}
+.music-list-inner {
+}
 
 .music-list-main {
-    background: #FFF;
+    background-color: #FFF;
     padding: 15px 0;
     border-radius: 3px;
-    border: 1px solid #F4F4F4;
 }
 
 .music-list-item {
@@ -229,15 +231,227 @@ input, a, button {
 }
 
 .music-list-item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .music-list-item:hover {
     border-left: 2px solid #1185fe;
 }
 
-.music-list-item .title {}
+.music-list-item .title {
+    font-size: 19px;
+}
 
-.music-list-item .author {}
+.music-list-item .author {
+    color: #6a737d;
+}
 
-.music-list-item .album {}
+.music-list-item .album {
+    color: #6a737d;
+}
+
+.music-list-item .actions {
+    margin-top: 10px;
+}
+
+.music-list-item .action-item {
+    text-decoration: none;
+}
+
+.music-list-item .action-item > i {
+    margin-right: 10px;
+}
+
+.music-list-loading {
+    background-color: #FFF;
+    padding: 15px 0;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.music-list-pagination {
+    background-color: #FFF;
+    padding: 15px 0;
+    margin-top: 10px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.music-list-pagination .pre-page, .music-list-pagination .nxt-page {
+    width: 100px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    transition: color ease-in-out .15s, background-color ease-in-out .15s;
+}
+
+.music-list-pagination .pre-page {
+    margin-right: 20px;
+}
+
+.music-list-pagination .pre-page:hover, .music-list-pagination .nxt-page:hover {
+    background-color: #0083ff;
+    color: #FFF;
+}
+
+/* spinner loading */
+.spinner-root {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.spinner-spinner {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px
+}
+
+.spinner-large {
+    width: 35px;
+    height: 35px
+}
+
+.spinner-large .spinner-blade {
+    width: 8.57143%;
+    height: 25.71429%;
+    border-radius: 50%/16.67%
+}
+
+.spinner-white-15Os .spinner-blade {
+    background-color: #fff
+}
+
+@-webkit-keyframes spinner-fade {
+    0% {
+        opacity: .85
+    }
+
+    50% {
+        opacity: .25
+    }
+
+    to {
+        opacity: .25
+    }
+}
+
+@keyframes spinner-fade {
+    0% {
+        opacity: .85
+    }
+
+    50% {
+        opacity: .25
+    }
+
+    to {
+        opacity: .25
+    }
+}
+
+.spinner-blade {
+    position: absolute;
+    left: 44.5%;
+    top: 37%;
+    width: 10%;
+    height: 25%;
+    border-radius: 50%/20%;
+    background-color: #8c8c8c;
+    -webkit-animation: spinner-fade 1s linear infinite;
+    animation: spinner-fade 1s linear infinite
+}
+
+.spinner-blade:first-child {
+    -webkit-animation-delay: -1.66667s;
+    animation-delay: -1.66667s;
+    -webkit-transform: rotate(30deg) translateY(-150%);
+    transform: rotate(30deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(2) {
+    -webkit-animation-delay: -1.58333s;
+    animation-delay: -1.58333s;
+    -webkit-transform: rotate(60deg) translateY(-150%);
+    transform: rotate(60deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(3) {
+    -webkit-animation-delay: -1.5s;
+    animation-delay: -1.5s;
+    -webkit-transform: rotate(90deg) translateY(-150%);
+    transform: rotate(90deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(4) {
+    -webkit-animation-delay: -1.41667s;
+    animation-delay: -1.41667s;
+    -webkit-transform: rotate(120deg) translateY(-150%);
+    transform: rotate(120deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(5) {
+    -webkit-animation-delay: -1.33333s;
+    animation-delay: -1.33333s;
+    -webkit-transform: rotate(150deg) translateY(-150%);
+    transform: rotate(150deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(6) {
+    -webkit-animation-delay: -1.25s;
+    animation-delay: -1.25s;
+    -webkit-transform: rotate(180deg) translateY(-150%);
+    transform: rotate(180deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(7) {
+    -webkit-animation-delay: -1.16667s;
+    animation-delay: -1.16667s;
+    -webkit-transform: rotate(210deg) translateY(-150%);
+    transform: rotate(210deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(8) {
+    -webkit-animation-delay: -1.08333s;
+    animation-delay: -1.08333s;
+    -webkit-transform: rotate(240deg) translateY(-150%);
+    transform: rotate(240deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(9) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+    -webkit-transform: rotate(270deg) translateY(-150%);
+    transform: rotate(270deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(10) {
+    -webkit-animation-delay: -.91667s;
+    animation-delay: -.91667s;
+    -webkit-transform: rotate(300deg) translateY(-150%);
+    transform: rotate(300deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(11) {
+    -webkit-animation-delay: -.83333s;
+    animation-delay: -.83333s;
+    -webkit-transform: rotate(330deg) translateY(-150%);
+    transform: rotate(330deg) translateY(-150%)
+}
+
+.spinner-blade:nth-child(12) {
+    -webkit-animation-delay: -.75s;
+    animation-delay: -.75s;
+    -webkit-transform: rotate(1turn) translateY(-150%);
+    transform: rotate(1turn) translateY(-150%)
+}

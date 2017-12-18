@@ -18,8 +18,7 @@
                     <span class="logo"></span>
                 </a>
                 <div class="navbar-search">
-                    <form class="navbar-search-form" action="./m-api" method="get">
-                        <input type="hidden" name="action" value="search">
+                    <form class="navbar-search-form" onsubmit="return false">
                         <div class="search-site-selector">
                             <div class="option-selected"></div>
                             <div class="options anim-fade-in">
@@ -40,7 +39,12 @@
 
         <div class="music-list">
             <div class="music-list-inner container">
-                <div class="music-list-main"></div>
+                <div class="music-list-main"><span style="text-align: center;display: block;">Hello Guys</span></div>
+                <div class="music-list-loading" style="display: none;"></div>
+                <div class="music-list-pagination" style="display: none;">
+                    <span class="pre-page">上一页</span>
+                    <span class="nxt-page">下一页</span>
+                </div>
             </div>
         </div>
     </div>
