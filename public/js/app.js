@@ -88,7 +88,7 @@ var app = {
 
             selectorSelected.click(_this.showSelectorOptions.bind(_this));
             _this.formElem.submit(function () {
-                router.setRoute('/search/' + _this.siteInput.val() + '/' + _this.keywrodInput.val() + '/1');
+                router.setRoute(['search', encodeURIComponent(_this.siteInput.val()), encodeURIComponent(_this.keywrodInput.val()), '1'].join('/'));
             });
         },
 
@@ -107,12 +107,14 @@ var app = {
                 beforeSend: function () {
                     app.musicList.listLoading.show();
                     app.musicList.listPagination.hide();
+                    app.musicList.listMainElem.hide();
                 },
                 success: function (data) {
                     app.musicList.listLoading.hide();
                     app.musicList.listPagination.show();
                     console.log(data);
                     app.musicList.push(data);
+                    app.musicList.listMainElem.show();
                     $('html, body').animate({
                         scrollTop: '0px'
                     }, 200);
