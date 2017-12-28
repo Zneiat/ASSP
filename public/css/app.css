@@ -221,20 +221,25 @@ input, a, button {
 
 .music-list-main {
     background-color: #FFF;
-    padding: 15px 0;
+    padding: 10px 0;
     border-radius: 3px;
 }
 
-.music-list-item {
-    padding: 10px 25px;
-    border-left: 2px solid rgba(0, 0, 0, 0);
-}
+.music-list-item {  }
 
 .music-list-item:not(:last-child) {
+    margin-top: 15px;
     margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
 }
 
-.music-list-item:hover {
+.music-list-item-inner {
+    padding: 10px 25px;
+    margin: 20px 0;
+    border-left: 2px solid transparent;
+}
+
+.music-list-item-inner:hover {
     border-left: 2px solid #1185fe;
 }
 
@@ -280,12 +285,11 @@ input, a, button {
 .music-list-pagination .pre-page, .music-list-pagination .nxt-page {
     width: 100px;
     display: inline-block;
-    height: 30px;
-    line-height: 30px;
     border-radius: 3px;
     cursor: pointer;
     user-select: none;
     transition: color ease-in-out .15s, background-color ease-in-out .15s;
+    padding: 7px 0;
 }
 
 .music-list-pagination .pre-page {

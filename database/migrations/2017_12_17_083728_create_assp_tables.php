@@ -25,7 +25,7 @@ class CreateAsspTables extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->comment = '用户表';
-            $table->engine = 'MyISAM';
+            $table->engine = 'InnoDB';
             $table->unique('email');
         });
     }

@@ -16,3 +16,5 @@
 $router->get('/', function () {
     return file_get_contents(resource_path('/views/index.html'));
 });
+
+require __DIR__ . '/m-api.php';

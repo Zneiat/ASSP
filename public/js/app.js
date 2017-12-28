@@ -96,7 +96,7 @@ var app = {
             var _this = this;
 
             $.ajax({
-                url: 'm-api',
+                url: './m-api',
                 data: {
                     action: 'search',
                     site: site,
@@ -170,14 +170,19 @@ var app = {
         },
 
         itemRender: function (obj) {
-            var srcUrl = 'm-api?site=' + encodeURIComponent(obj['source']) + '&action=song_src_r&id=' + encodeURIComponent(obj['id']);
+            var srcUrl = './m-api?site=' + encodeURIComponent(obj['source']) + '&action=song_src_r&id=' + encodeURIComponent(obj['id']);
             var itemElem = $(
                 '<div class="music-list-item">' +
+                '<div class="music-list-item-inner">' +
+                '' +
                 '<div class="title">' + obj['name'] + '</div>' +
                 '<div class="album">' + obj['album'] + '</div>' +
                 '<div class="author">' + obj['artist'].join(' & ') + '</div>' +
+                '' +
                 '<div class="actions">' +
                 '<a class="action-item" href="' + srcUrl + '" download><i class="zmdi zmdi-download"></i> 下载</a>' +
+                '</div>' +
+                '' +
                 '</div>' +
                 '</div>'
             );
